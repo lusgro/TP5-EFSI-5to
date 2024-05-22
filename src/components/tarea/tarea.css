@@ -1,0 +1,28 @@
+li {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li.completada {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.btnBorrar {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.btnBorrar:hover {
+    background-color: #c82333;
+}

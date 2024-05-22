@@ -1,7 +1,7 @@
 import './btnRapidez.css'
 
-const BtnRapidez = () => {
-    return <button id="btnRapidez">Ver tarea más rapida en realizarse</button>
+const BtnRapidez = (props) => {
+    return <button id="btnRapidez" onClick={props.onClick}>Ver tarea más rapida en realizarse</button>
 }
 
 export default BtnRapidez;

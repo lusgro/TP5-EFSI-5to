@@ -1,18 +1,14 @@
-import { useState } from 'react'
 import './App.css'
-import TareasContext from './TareasContext';
-
+import { TareasProvider } from './TareasContext';
 import Formulario from './components/formulario/formulario'
 import ListaTareas from './components/listaTareas/listaTareas';
 
 function App() {
-  const [tareas, setTareas] = useState([]);
   return (
-    <TareasContext.Provider value={{tareas, setTareas}}>
+    <TareasProvider>
       <Formulario />
       <ListaTareas />
-
-    </TareasContext.Provider>
+    </TareasProvider>
   )
 }
 

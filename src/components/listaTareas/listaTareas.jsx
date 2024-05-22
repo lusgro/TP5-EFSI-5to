@@ -1,21 +1,14 @@
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import './listaTareas.css';
+import Tarea from '../tarea/tarea';
+import { TareasContext } from '../../TareasContext';
 
 const ListaTareas = () => {
-    var className
-    const { tareas, setTareas } = useContext(TareasContext);
-    return (
-        tareas.map((tarea, index) => {
-            className = ''
-            if (tarea.fueCompletada) {
-                className = 'completada'
-            }
-            <div>
-                <li className={className}>{tarea.nombre}</li>
-                
-            </div>
+    const [tareas] = useContext(TareasContext);
 
-
-}
+    return tareas.map((tarea, index) => (
+        <Tarea key={index} index={index} tarea={tarea} />
+    ));
+};
 
 export default ListaTareas;
